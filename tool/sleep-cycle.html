@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Cycle Calculator - SleepWell</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-moon"></i>
+                        <h1>SleepWell</h1>
+                    </a>
+                </div>
+                <button class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="sleep-calculators.html" class="active">Sleep Calculators</a></li>
+                        <li><a href="../tools/nap-calculators.html">Nap Calculators</a></li>
+                        <li><a href="../tools/baby-tools.html">Baby Sleep Tools</a></li>
+                        <li><a href="../tools/rhythm-tools.html">Sleep Rhythm Tools</a></li>
+                        <li><a href="../blog/index.html">Blog</a></li>
+                    </ul>
+                </nav>
+                <button class="mode-toggle" id="modeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section">
+        <div class="container">
+            <h2 class="calculator-title">Sleep Cycle Calculator</h2>
+            <div class="calculator-form">
+                <div class="form-group">
+                    <label for="bedtime">When do you plan to go to bed?</label>
+                    <input type="time" id="bedtime" class="form-control" value="22:30">
+                </div>
+                <div class="form-group">
+                    <label for="wakeTime">When do you need to wake up?</label>
+                    <input type="time" id="wakeTime" class="form-control" value="06:30">
+                </div>
+                <button class="calculate-btn" id="calculateBtn">Calculate Sleep Cycles</button>
+                <div class="result" id="result">
+                    <h3>Your Sleep Analysis</h3>
+                    <p>Based on your inputs, you'll complete approximately <strong id="cycleCount">5-6 sleep cycles</strong>.</p>
+                    <p>Your optimal wake-up times would be: <strong id="optimalTimes">4:00 AM, 5:30 AM, or 7:00 AM</strong></p>
+                    <div class="sleep-tips">
+                        <h4>Sleep Tips:</h4>
+                        <ul>
+                            <li>Try to complete 5-6 full sleep cycles for optimal rest</li>
+                            <li>Avoid caffeine 6 hours before bedtime</li>
+                            <li>Keep your bedroom dark and cool</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AdSense Placeholder -->
+    <div class="container">
+        <div class="ad-container">
+            <p>AdSense Advertisement</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Sleep Calculators</h3>
+                    <ul>
+                        <li><a href="sleep-cycle.html" class="active">Sleep Cycle Calculator</a></li>
+                        <li><a href="wake-up-time.html">Wake Up Time Calculator</a></li>
+                        <li><a href="sleep-debt.html">Sleep Debt Calculator</a></li>
+                        <li><a href="sleep-quality.html">Sleep Quality Score</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="../legal/privacy.html">Privacy Policy</a></li>
+                        <li><a href="../legal/terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 SleepWell. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/night-mode.js"></script>
+    <script src="../js/calculators.js"></script>
+</body>
+</html>
