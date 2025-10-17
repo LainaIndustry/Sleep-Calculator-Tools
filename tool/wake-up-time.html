@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wake Up Time Calculator - SleepWell</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-moon"></i>
+                        <h1>SleepWell</h1>
+                    </a>
+                </div>
+                <button class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="sleep-calculators.html" class="active">Sleep Calculators</a></li>
+                        <li><a href="nap-calculators.html">Nap Calculators</a></li>
+                        <li><a href="baby-tools.html">Baby Sleep Tools</a></li>
+                        <li><a href="rhythm-tools.html">Sleep Rhythm Tools</a></li>
+                        <li><a href="../blog/index.html">Blog</a></li>
+                    </ul>
+                </nav>
+                <button class="mode-toggle" id="modeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="calculator-section">
+        <div class="container">
+            <h2 class="calculator-title">Best Time to Wake Up Calculator</h2>
+            <div class="calculator-form">
+                <div class="form-group">
+                    <label for="sleepTime">When do you plan to go to sleep?</label>
+                    <input type="time" id="sleepTime" class="form-control" value="22:30">
+                </div>
+                <div class="form-group">
+                    <label for="cycles">How many sleep cycles do you want? (90 min each)</label>
+                    <select id="cycles" class="form-control">
+                        <option value="4">4 cycles (6 hours)</option>
+                        <option value="5" selected>5 cycles (7.5 hours)</option>
+                        <option value="6">6 cycles (9 hours)</option>
+                    </select>
+                </div>
+                <button class="calculate-btn" id="calculateBtn">Calculate Wake Up Times</button>
+                <div class="result" id="result">
+                    <h3>Optimal Wake Up Times</h3>
+                    <p>For the best rest, wake up at one of these times:</p>
+                    <div id="wakeTimes"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="ad-container">
+            <p>AdSense Advertisement</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Sleep Calculators</h3>
+                    <ul>
+                        <li><a href="sleep-cycle.html">Sleep Cycle Calculator</a></li>
+                        <li><a href="wake-up-time.html" class="active">Wake Up Time Calculator</a></li>
+                        <li><a href="sleep-debt.html">Sleep Debt Calculator</a></li>
+                        <li><a href="sleep-quality.html">Sleep Quality Score</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="../legal/privacy.html">Privacy Policy</a></li>
+                        <li><a href="../legal/terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 SleepWell. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/night-mode.js"></script>
+    <script>
+        document.getElementById('calculateBtn').addEventListener('click', function() {
+            const sleepTime = document.getElementById('sleepTime').value;
+            const cycles = parseInt(document.getElementById('cycles').value);
+            
+            if (!sleepTime) {
+                alert('Please enter your planned sleep time');
+                return;
+            }
+            
+            const [hours, minutes] = sleepTime.split(':').map(Number);
+            const sleepDate = new Date();
+            sleepDate.setHours(hours, minutes, 0, 0);
+            
+            const cycleDuration = 90; // minutes
+            const totalSleepTime = cycles * cycleDuration;
+            
+            const wakeDate = new Date(sleepDate.getTime() + totalSleepTime * 60 * 1000);
+            
+            // Calculate multiple wake times (cycles ±1)
+            const wakeTimes = [];
+            for (let i = cycles - 1; i <= cycles + 1; i++) {
+                if (i >= 3 && i <= 7) {
+                    const time = new Date(sleepDate.getTime() + i * cycleDuration * 60 * 1000);
+                    wakeTimes.push({
+                        cycles: i,
+                        time: time.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}),
+                        hours: (i * 1.5).toFixed(1)
+                    });
+                }
+            }
+            
+            let html = '<div class="wake-times-grid">';
+            wakeTimes.forEach(wake => {
+                html += `
+                    <div class="wake-time-option">
+                        <strong>${wake.time}</strong><br>
+                        ${wake.cycles} cycles (${wake.hours} hours)
+                    </div>
+                `;
+            });
+            html += '</div>';
+            
+            document.getElementById('wakeTimes').innerHTML = html;
+            document.getElementById('result').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
