@@ -3,173 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SleepWell - Multi-Sleep Calculator Tool</title>
+    <title>SleepWell - Sleep Calculators & Resources</title>
+    <meta name="description" content="Free sleep calculators to help you find the perfect sleep schedule, nap duration, and baby sleep patterns.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- AdSense Code -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
-     crossorigin="anonymous"></script>
-    <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxx" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-content">
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
                 <div class="logo">
-                    <i class="fas fa-moon"></i>
-                    <h1>SleepWell</h1>
+                    <h2>SleepWell</h2>
                 </div>
-                <button class="nav-toggle" id="navToggle">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <nav id="mainNav">
-                    <ul>
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="tools/sleep-calculators.html">Sleep Calculators</a></li>
-                        <li><a href="tools/nap-calculators.html">Nap Calculators</a></li>
-                        <li><a href="tools/baby-tools.html">Baby Sleep Tools</a></li>
-                        <li><a href="tools/rhythm-tools.html">Sleep Rhythm Tools</a></li>
-                        <li><a href="blog/index.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="about.html">About</a></li>
-                    </ul>
-                </nav>
-                <button class="mode-toggle" id="modeToggle">
-                    <i class="fas fa-moon"></i>
-                </button>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Sleep Tools ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="tools/sleep-calculator.html">Sleep Calculator</a></li>
+                            <li><a href="tools/nap-calculator.html">Nap Calculator</a></li>
+                            <li><a href="tools/baby-sleep-schedule.html">Baby Sleep Schedule</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog.html" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
-        </div>
+        </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <h2>Optimize Your Sleep with Our Calculators</h2>
-            <p>Discover the perfect sleep schedule, track your sleep quality, and improve your overall well-being with our comprehensive sleep tools.</p>
-            <a href="#tools" class="cta-button">Explore Tools</a>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Optimize Your Sleep with Science-Backed Calculators</h1>
+                <p>Discover your perfect sleep schedule, ideal nap times, and create healthy sleep routines for your baby.</p>
+                <div class="hero-buttons">
+                    <a href="tools/sleep-calculator.html" class="btn btn-primary">Sleep Calculator</a>
+                    <a href="tools/nap-calculator.html" class="btn btn-secondary">Nap Calculator</a>
+                </div>
+            </div>
         </div>
     </section>
-
-    <!-- Header Ad Unit -->
-    <div class="container">
-        <div class="ad-unit header-ad">
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
-                crossorigin="anonymous"></script>
-            <!-- SleepWell Header Ad -->
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                data-ad-slot="XXXXXXXXXX"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-    </div>
 
     <!-- Tools Section -->
-    <section class="tools-section" id="tools">
+    <section class="tools-section" id="sleep-tools">
         <div class="container">
-            <h2 class="section-title">All Sleep Tools</h2>
-            
-            <!-- In-content Ad Unit 1 -->
-            <div class="ad-unit in-content-ad">
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
-                    crossorigin="anonymous"></script>
-                <!-- SleepWell In-content 1 -->
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                    data-ad-slot="XXXXXXXXXX"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-
-            <!-- Sleep Calculators -->
-            <h3 class="category-title">Sleep Calculators</h3>
+            <h2 class="section-title">Our Sleep Tools</h2>
             <div class="tools-grid">
-                <!-- ... tool cards remain the same ... -->
+                <div class="tool-card">
+                    <div class="tool-icon">💤</div>
+                    <h3>Sleep Calculator</h3>
+                    <p>Calculate your ideal bedtime or wake-up time based on sleep cycles for refreshed mornings.</p>
+                    <a href="tools/sleep-calculator.html" class="btn btn-outline">Use Calculator</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">😴</div>
+                    <h3>Nap Calculator</h3>
+                    <p>Find the perfect nap duration and timing to boost energy without affecting nighttime sleep.</p>
+                    <a href="tools/nap-calculator.html" class="btn btn-outline">Use Calculator</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">👶</div>
+                    <h3>Baby Sleep Schedule</h3>
+                    <p>Create customized sleep schedules for your baby based on age and sleep patterns.</p>
+                    <a href="tools/baby-sleep-schedule.html" class="btn btn-outline">Use Calculator</a>
+                </div>
             </div>
-
-            <!-- In-content Ad Unit 2 -->
-            <div class="ad-unit in-content-ad">
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
-                    crossorigin="anonymous"></script>
-                <!-- SleepWell In-content 2 -->
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                    data-ad-slot="XXXXXXXXXX"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-
-            <!-- ... rest of the tools sections ... -->
         </div>
     </section>
 
-    <!-- Footer Ad Unit -->
-    <div class="container">
-        <div class="ad-unit footer-ad">
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
-                crossorigin="anonymous"></script>
-            <!-- SleepWell Footer Ad -->
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                data-ad-slot="XXXXXXXXXX"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+    <!-- AdSense Banner -->
+    <section class="ad-section">
+        <div class="container">
+            <div class="ad-banner">
+                <!-- AdSense Code -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-xxxxx"
+                     data-ad-slot="1234567890"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
         </div>
-    </div>
+    </section>
 
     <!-- Blog Preview -->
     <section class="blog-preview">
         <div class="container">
             <h2 class="section-title">Latest Sleep Tips</h2>
-            
-            <!-- Blog Ad Unit -->
-            <div class="ad-unit blog-ad">
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
-                    crossorigin="anonymous"></script>
-                <!-- SleepWell Blog Ad -->
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                    data-ad-slot="XXXXXXXXXX"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-
             <div class="blog-grid">
-                <!-- ... blog cards ... -->
+                <article class="blog-card">
+                    <h3>10 Tips for Better Sleep Quality</h3>
+                    <p>Discover proven strategies to improve your sleep quality and wake up feeling refreshed.</p>
+                    <a href="blog-posts/post1.html" class="read-more">Read More</a>
+                </article>
+                <article class="blog-card">
+                    <h3>The Science of Sleep Cycles</h3>
+                    <p>Understand how sleep cycles work and why they're crucial for restorative sleep.</p>
+                    <a href="blog-posts/post2.html" class="read-more">Read More</a>
+                </article>
+                <article class="blog-card">
+                    <h3>Baby Sleep Training Methods</h3>
+                    <p>Explore different approaches to help your baby develop healthy sleep habits.</p>
+                    <a href="blog-posts/post3.html" class="read-more">Read More</a>
+                </article>
+            </div>
+            <div class="text-center">
+                <a href="blog.html" class="btn btn-primary">View All Articles</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <!-- ... footer content ... -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SleepWell</h3>
+                    <p>Helping you achieve better sleep through science-backed tools and resources.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="tools/sleep-calculator.html">Sleep Calculator</a></li>
+                        <li><a href="tools/nap-calculator.html">Nap Calculator</a></li>
+                        <li><a href="tools/baby-sleep-schedule.html">Baby Sleep Schedule</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SleepWell. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
-    <script src="js/main.js"></script>
-    <script src="js/night-mode.js"></script>
-    <script src="js/adsense-manager.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
