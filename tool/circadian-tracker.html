@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circadian Rhythm Tracker - SleepWell</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-moon"></i>
+                        <h1>SleepWell</h1>
+                    </a>
+                </div>
+                <button class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="sleep-calculators.html">Sleep Calculators</a></li>
+                        <li><a href="nap-calculators.html">Nap Calculators</a></li>
+                        <li><a href="baby-tools.html">Baby Sleep Tools</a></li>
+                        <li><a href="rhythm-tools.html" class="active">Sleep Rhythm Tools</a></li>
+                        <li><a href="../blog/index.html">Blog</a></li>
+                    </ul>
+                </nav>
+                <button class="mode-toggle" id="modeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="calculator-section">
+        <div class="container">
+            <h2 class="calculator-title">Circadian Rhythm Tracker</h2>
+            <div class="calculator-form">
+                <div class="form-group">
+                    <label for="chronotype">What's your natural sleep pattern?</label>
+                    <select id="chronotype" class="form-control">
+                        <option value="early">Early Bird (Morning person)</option>
+                        <option value="neutral" selected>Neutral</option>
+                        <option value="night">Night Owl (Evening person)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="wakeTime">Natural wake-up time (without alarm)</label>
+                    <input type="time" id="wakeTime" class="form-control" value="07:00">
+                </div>
+                <div class="form-group">
+                    <label for="bedtime">Natural bedtime (when you feel sleepy)</label>
+                    <input type="time" id="bedtime" class="form-control" value="23:00">
+                </div>
+                <div class="form-group">
+                    <label for="energyPeak">When do you feel most alert?</label>
+                    <select id="energyPeak" class="form-control">
+                        <option value="morning">Morning (8 AM - 12 PM)</option>
+                        <option value="afternoon" selected>Afternoon (1 PM - 5 PM)</option>
+                        <option value="evening">Evening (6 PM - 10 PM)</option>
+                    </select>
+                </div>
+                <button class="calculate-btn" id="calculateBtn">Analyze Circadian Rhythm</button>
+                <div class="result" id="result">
+                    <h3>Your Circadian Rhythm Analysis</h3>
+                    <div id="rhythmAnalysis"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="ad-container">
+            <p>AdSense Advertisement</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Sleep Rhythm Tools</h3>
+                    <ul>
+                        <li><a href="circadian-tracker.html" class="active">Circadian Rhythm Tracker</a></li>
+                        <li><a href="sleep-planner.html">Sleep Schedule Planner</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="../legal/privacy.html">Privacy Policy</a></li>
+                        <li><a href="../legal/terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 SleepWell. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/night-mode.js"></script>
+    <script>
+        document.getElementById('calculateBtn').addEventListener('click', function() {
+            const chronotype = document.getElementById('chronotype').value;
+            const wakeTime = document.getElementById('wakeTime').value;
+            const bedtime = document.getElementById('bedtime').value;
+            const energyPeak = document.getElementById('energyPeak').value;
+            
+            const [wakeHours, wakeMinutes] = wakeTime.split(':').map(Number);
+            const [bedHours, bedMinutes] = bedtime.split(':').map(Number);
+            
+            let chronotypeDesc, optimalSchedule, recommendations;
+            
+            switch(chronotype) {
+                case 'early':
+                    chronotypeDesc = "Early Bird (Lark)";
+                    optimalSchedule = "Best performance in morning, ideal for traditional work schedules";
+                    recommendations = "Schedule important tasks before noon, light exposure in early morning";
+                    break;
+                case 'neutral':
+                    chronotypeDesc = "Intermediate Type";
+                    optimalSchedule = "Flexible schedule, adapts well to most routines";
+                    recommendations = "Maintain consistent sleep times, moderate light exposure throughout day";
+                    break;
+                case 'night':
+                    chronotypeDesc = "Night Owl";
+                    optimalSchedule = "Peak performance in evening, may struggle with early mornings";
+                    recommendations = "Gradual schedule adjustments, evening light restriction, bright morning light";
+                    break;
+            }
+            
+            const resultHTML = `
+                <div class="rhythm-profile">
+                    <p><strong>Chronotype:</strong> ${chronotypeDesc}</p>
+                    <p><strong>Natural Sleep Window:</strong> ${wakeTime} to ${bedtime}</p>
+                    <p><strong>Peak Energy:</strong> ${energyPeak}</p>
+                    <p><strong>Optimal Schedule:</strong> ${optimalSchedule}</p>
+                </div>
+                <div class="circadian-tips">
+                    <h4>Circadian Rhythm Optimization:</h4>
+                    <ul>
+                        <li>${recommendations}</li>
+                        <li>Get morning sunlight exposure</li>
+                        <li>Avoid bright screens 2 hours before bed</li>
+                        <li>Maintain consistent sleep/wake times</li>
+                        <li>Time meals and exercise with your rhythm</li>
+                    </ul>
+                </div>
+            `;
+            
+            document.getElementById('rhythmAnalysis').innerHTML = resultHTML;
+            document.getElementById('result').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
