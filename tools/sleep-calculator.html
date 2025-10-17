@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Calculator - Find Your Perfect Bedtime | SleepWell</title>
+    <meta name="description" content="Calculate your ideal bedtime or wake-up time based on sleep cycles. Wake up refreshed and energized.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/sleep-calculator.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxx" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2><a href="../index.html" style="color: inherit; text-decoration: none;">SleepWell</a></h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link active">Sleep Tools ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="sleep-calculator.html" class="active">Sleep Calculator</a></li>
+                            <li><a href="nap-calculator.html">Nap Calculator</a></li>
+                            <li><a href="baby-sleep-schedule.html">Baby Sleep Schedule</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../blog.html" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="calculator-main">
+        <div class="container">
+            <div class="calculator-header">
+                <h1>Sleep Calculator</h1>
+                <p>Find your perfect bedtime or wake-up time based on sleep cycles</p>
+            </div>
+
+            <div class="calculator-container">
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="calculation-type">I want to calculate:</label>
+                        <select id="calculation-type" class="form-control">
+                            <option value="bedtime">My bedtime based on wake-up time</option>
+                            <option value="waketime">My wake-up time based on bedtime</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="wake-time-group">
+                        <label for="wake-time">Wake-up Time:</label>
+                        <input type="time" id="wake-time" class="form-control" value="07:00">
+                    </div>
+
+                    <div class="form-group" id="bed-time-group" style="display: none;">
+                        <label for="bed-time">Bedtime:</label>
+                        <input type="time" id="bed-time" class="form-control" value="23:00">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fall-asleep-time">Time to fall asleep (minutes):</label>
+                        <input type="number" id="fall-asleep-time" class="form-control" value="15" min="5" max="60">
+                        <small>Average time it takes you to fall asleep</small>
+                    </div>
+
+                    <button id="calculate-btn" class="btn btn-primary btn-large">Calculate Sleep Times</button>
+                </div>
+
+                <div class="results-section" id="results-section" style="display: none;">
+                    <h3>Your Ideal Sleep Times</h3>
+                    <div class="results-grid" id="results-grid">
+                        <!-- Results will be populated here -->
+                    </div>
+                    <div class="sleep-tips">
+                        <h4>Sleep Tips</h4>
+                        <ul>
+                            <li>Try to maintain a consistent sleep schedule</li>
+                            <li>Avoid screens 1 hour before bedtime</li>
+                            <li>Keep your bedroom cool and dark</li>
+                            <li>Avoid caffeine 6 hours before sleep</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AdSense Banner -->
+            <div class="ad-section">
+                <div class="ad-banner">
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-xxxxx"
+                         data-ad-slot="1234567891"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SleepWell</h3>
+                    <p>Helping you achieve better sleep through science-backed tools and resources.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="sleep-calculator.html">Sleep Calculator</a></li>
+                        <li><a href="nap-calculator.html">Nap Calculator</a></li>
+                        <li><a href="baby-sleep-schedule.html">Baby Sleep Schedule</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SleepWell. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/sleep-calculator.js"></script>
+</body>
+</html>
