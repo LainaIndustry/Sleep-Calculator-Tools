@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nap Calculator - Find Perfect Nap Times | SleepWell</title>
+    <meta name="description" content="Calculate ideal nap durations and times to boost energy without affecting nighttime sleep.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/nap-calculator.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxx" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2><a href="../index.html" style="color: inherit; text-decoration: none;">SleepWell</a></h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link active">Sleep Tools ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="sleep-calculator.html">Sleep Calculator</a></li>
+                            <li><a href="nap-calculator.html" class="active">Nap Calculator</a></li>
+                            <li><a href="baby-sleep-schedule.html">Baby Sleep Schedule</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../blog.html" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="calculator-main">
+        <div class="container">
+            <div class="calculator-header">
+                <h1>Nap Calculator</h1>
+                <p>Find the perfect nap duration and timing to boost your energy</p>
+            </div>
+
+            <div class="calculator-container">
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="wake-time">What time did you wake up?</label>
+                        <input type="time" id="wake-time" class="form-control" value="07:00">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bedtime">Planned bedtime tonight:</label>
+                        <input type="time" id="bedtime" class="form-control" value="23:00">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="energy-level">Current energy level:</label>
+                        <select id="energy-level" class="form-control">
+                            <option value="high">High - Just need a quick boost</option>
+                            <option value="medium" selected>Medium - Moderate tiredness</option>
+                            <option value="low">Low - Very tired</option>
+                            <option value="exhausted">Exhausted - Need significant rest</option>
+                        </select>
+                    </div>
+
+                    <button id="calculate-btn" class="btn btn-primary btn-large">Calculate Nap Times</button>
+                </div>
+
+                <div class="results-section" id="results-section" style="display: none;">
+                    <h3>Recommended Nap Options</h3>
+                    <div class="nap-options" id="nap-options">
+                        <!-- Results will be populated here -->
+                    </div>
+                    
+                    <div class="nap-tips">
+                        <h4>Nap Tips & Guidelines</h4>
+                        <div class="tips-grid">
+                            <div class="tip-card">
+                                <h5>Power Nap (10-20 min)</h5>
+                                <p>Quick energy boost, improves alertness without sleep inertia</p>
+                            </div>
+                            <div class="tip-card">
+                                <h5>Short Nap (30 min)</h5>
+                                <p>Good for memory consolidation, may experience slight grogginess</p>
+                            </div>
+                            <div class="tip-card">
+                                <h5>Full Cycle (90 min)</h5>
+                                <p>Complete sleep cycle, best for creativity and emotional regulation</p>
+                            </div>
+                            <div class="tip-card">
+                                <h5>Timing Matters</h5>
+                                <p>Avoid napping after 3 PM to prevent interference with nighttime sleep</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AdSense Banner -->
+            <div class="ad-section">
+                <div class="ad-banner">
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-xxxxx"
+                         data-ad-slot="1234567892"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SleepWell</h3>
+                    <p>Helping you achieve better sleep through science-backed tools and resources.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="sleep-calculator.html">Sleep Calculator</a></li>
+                        <li><a href="nap-calculator.html">Nap Calculator</a></li>
+                        <li><a href="baby-sleep-schedule.html">Baby Sleep Schedule</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SleepWell. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/nap-calculator.js"></script>
+</body>
+</html>
