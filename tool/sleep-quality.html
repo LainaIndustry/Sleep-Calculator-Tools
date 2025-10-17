@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Quality Score - SleepWell</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-moon"></i>
+                        <h1>SleepWell</h1>
+                    </a>
+                </div>
+                <button class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="sleep-calculators.html" class="active">Sleep Calculators</a></li>
+                        <li><a href="nap-calculators.html">Nap Calculators</a></li>
+                        <li><a href="baby-tools.html">Baby Sleep Tools</a></li>
+                        <li><a href="rhythm-tools.html">Sleep Rhythm Tools</a></li>
+                        <li><a href="../blog/index.html">Blog</a></li>
+                    </ul>
+                </nav>
+                <button class="mode-toggle" id="modeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="calculator-section">
+        <div class="container">
+            <h2 class="calculator-title">Sleep Quality Score Assessment</h2>
+            <div class="calculator-form">
+                <div class="form-group">
+                    <label>How long does it take you to fall asleep?</label>
+                    <select id="fallAsleep" class="form-control">
+                        <option value="5">Less than 15 minutes</option>
+                        <option value="3">15-30 minutes</option>
+                        <option value="1">More than 30 minutes</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>How many times do you wake up at night?</label>
+                    <select id="wakeUps" class="form-control">
+                        <option value="5">0-1 times</option>
+                        <option value="3">2-3 times</option>
+                        <option value="1">More than 3 times</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>How do you feel when you wake up?</label>
+                    <select id="morningFeeling" class="form-control">
+                        <option value="5">Refreshed and energetic</option>
+                        <option value="3">Somewhat tired</option>
+                        <option value="1">Exhausted</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Do you use electronic devices before bed?</label>
+                    <select id="electronics" class="form-control">
+                        <option value="5">Rarely or never</option>
+                        <option value="3">Sometimes</option>
+                        <option value="1">Frequently</option>
+                    </select>
+                </div>
+                <button class="calculate-btn" id="calculateBtn">Calculate Sleep Quality Score</button>
+                <div class="result" id="result">
+                    <h3>Your Sleep Quality Score</h3>
+                    <div id="qualityResult"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="ad-container">
+            <p>AdSense Advertisement</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Sleep Calculators</h3>
+                    <ul>
+                        <li><a href="sleep-cycle.html">Sleep Cycle Calculator</a></li>
+                        <li><a href="wake-up-time.html">Wake Up Time Calculator</a></li>
+                        <li><a href="sleep-debt.html">Sleep Debt Calculator</a></li>
+                        <li><a href="sleep-quality.html" class="active">Sleep Quality Score</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="../legal/privacy.html">Privacy Policy</a></li>
+                        <li><a href="../legal/terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 SleepWell. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/night-mode.js"></script>
+    <script>
+        document.getElementById('calculateBtn').addEventListener('click', function() {
+            const fallAsleep = parseInt(document.getElementById('fallAsleep').value);
+            const wakeUps = parseInt(document.getElementById('wakeUps').value);
+            const morningFeeling = parseInt(document.getElementById('morningFeeling').value);
+            const electronics = parseInt(document.getElementById('electronics').value);
+            
+            const totalScore = fallAsleep + wakeUps + morningFeeling + electronics;
+            const maxScore = 20;
+            const percentage = (totalScore / maxScore) * 100;
+            
+            let rating, message, color;
+            
+            if (percentage >= 80) {
+                rating = "Excellent";
+                message = "Your sleep quality is outstanding! Keep up the good habits.";
+                color = "#34a853";
+            } else if (percentage >= 60) {
+                rating = "Good";
+                message = "Your sleep quality is good, but there's room for improvement.";
+                color = "#fbbc05";
+            } else if (percentage >= 40) {
+                rating = "Fair";
+                message = "Your sleep quality needs attention. Consider implementing better sleep habits.";
+                color = "#f29900";
+            } else {
+                rating = "Poor";
+                message = "Your sleep quality is significantly impacted. Consider consulting a sleep specialist.";
+                color = "#ea4335";
+            }
+            
+            const resultHTML = `
+                <div class="score-display" style="text-align: center; margin: 20px 0;">
+                    <div class="score-circle" style="width: 120px; height: 120px; border-radius: 50%; border: 8px solid ${color}; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 24px; font-weight: bold;">
+                        ${totalScore}/20
+                    </div>
+                    <h3 style="color: ${color};">${rating}</h3>
+                    <p>${message}</p>
+                </div>
+                <div class="sleep-tips">
+                    <h4>Recommendations:</h4>
+                    <ul>
+                        <li>Maintain consistent sleep schedule</li>
+                        <li>Avoid caffeine 6 hours before bedtime</li>
+                        <li>Create a relaxing bedtime routine</li>
+                        <li>Keep your bedroom dark and cool</li>
+                    </ul>
+                </div>
+            `;
+            
+            document.getElementById('qualityResult').innerHTML = resultHTML;
+            document.getElementById('result').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
