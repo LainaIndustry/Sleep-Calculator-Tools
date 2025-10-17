@@ -1,0 +1,275 @@
+.calculator-main {
+    padding: 120px 0 60px;
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+
+.calculator-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.calculator-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.calculator-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.calculator-container {
+    background: #fff;
+    border-radius: 15px;
+    padding: 3rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.calculator-form {
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border: 1px solid #e1e5e9;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.checkbox-label:hover {
+    border-color: #4a90e2;
+    background: #f0f7ff;
+}
+
+.checkbox-label input {
+    margin-right: 0.5rem;
+}
+
+.btn-large {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+}
+
+.results-section {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid #4a90e2;
+}
+
+.results-section h3 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.schedule-info {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border-left: 4px solid #ff6b6b;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.info-item {
+    text-align: center;
+    padding: 1rem;
+}
+
+.info-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4a90e2;
+    margin-bottom: 0.5rem;
+}
+
+.info-label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.schedule-timeline {
+    margin-bottom: 2rem;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: #fff;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #4a90e2;
+}
+
+.timeline-time {
+    font-weight: 700;
+    color: #333;
+    min-width: 100px;
+}
+
+.timeline-activity {
+    flex: 1;
+    color: #666;
+}
+
+.timeline-duration {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.timeline-item.nap {
+    border-left-color: #51cf66;
+}
+
+.timeline-item.night-sleep {
+    border-left-color: #339af0;
+}
+
+.timeline-item.feeding {
+    border-left-color: #ff922b;
+}
+
+.timeline-item.activity {
+    border-left-color: #cc5de8;
+}
+
+.baby-sleep-tips h4 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.tips-container {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.age-tip {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e1e5e9;
+}
+
+.age-tip:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.age-tip h5 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.age-tip p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.wake-window {
+    display: inline-block;
+    background: #e7f5ff;
+    color: #1971c2;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .calculator-container {
+        padding: 2rem;
+        margin: 0 1rem;
+    }
+
+    .calculator-header h1 {
+        font-size: 2rem;
+    }
+
+    .checkbox-group {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline-time {
+        min-width: auto;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Print styles for schedule */
+@media print {
+    .calculator-main {
+        padding: 0;
+    }
+    
+    .calculator-form,
+    .ad-section,
+    .footer,
+    .header {
+        display: none;
+    }
+    
+    .results-section {
+        display: block !important;
+        box-shadow: none;
+        border: 1px solid #333;
+    }
+}
