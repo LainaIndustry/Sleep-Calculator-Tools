@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afternoon Nap Time Calculator - SleepWell</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-moon"></i>
+                        <h1>SleepWell</h1>
+                    </a>
+                </div>
+                <button class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="sleep-calculators.html">Sleep Calculators</a></li>
+                        <li><a href="nap-calculators.html" class="active">Nap Calculators</a></li>
+                        <li><a href="baby-tools.html">Baby Sleep Tools</a></li>
+                        <li><a href="rhythm-tools.html">Sleep Rhythm Tools</a></li>
+                        <li><a href="../blog/index.html">Blog</a></li>
+                    </ul>
+                </nav>
+                <button class="mode-toggle" id="modeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="calculator-section">
+        <div class="container">
+            <h2 class="calculator-title">Afternoon Nap Time Calculator</h2>
+            <div class="calculator-form">
+                <div class="form-group">
+                    <label for="wakeTime">What time did you wake up today?</label>
+                    <input type="time" id="wakeTime" class="form-control" value="07:00">
+                </div>
+                <div class="form-group">
+                    <label for="bedtime">What time do you plan to go to bed tonight?</label>
+                    <input type="time" id="bedtime" class="form-control" value="23:00">
+                </div>
+                <div class="form-group">
+                    <label for="energyDip">When do you typically feel afternoon slump?</label>
+                    <select id="energyDip" class="form-control">
+                        <option value="14">2:00 PM</option>
+                        <option value="15" selected>3:00 PM</option>
+                        <option value="16">4:00 PM</option>
+                    </select>
+                </div>
+                <button class="calculate-btn" id="calculateBtn">Calculate Best Nap Time</button>
+                <div class="result" id="result">
+                    <h3>Optimal Afternoon Nap Schedule</h3>
+                    <div id="napSchedule"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="ad-container">
+            <p>AdSense Advertisement</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Nap Calculators</h3>
+                    <ul>
+                        <li><a href="power-nap.html">Power Nap Duration</a></li>
+                        <li><a href="afternoon-nap.html" class="active">Afternoon Nap Time</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="../legal/privacy.html">Privacy Policy</a></li>
+                        <li><a href="../legal/terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 SleepWell. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/night-mode.js"></script>
+    <script>
+        document.getElementById('calculateBtn').addEventListener('click', function() {
+            const wakeTime = document.getElementById('wakeTime').value;
+            const bedtime = document.getElementById('bedtime').value;
+            const energyDip = parseInt(document.getElementById('energyDip').value);
+            
+            const [wakeHours, wakeMinutes] = wakeTime.split(':').map(Number);
+            const [bedHours, bedMinutes] = bedtime.split(':').map(Number);
+            
+            const wakeDate = new Date();
+            wakeDate.setHours(wakeHours, wakeMinutes, 0, 0);
+            
+            const bedDate = new Date();
+            bedDate.setHours(bedHours, bedMinutes, 0, 0);
+            
+            // Calculate midpoint of waking hours
+            const totalWakeTime = bedDate - wakeDate;
+            const midpoint = new Date(wakeDate.getTime() + totalWakeTime / 2);
+            
+            // Calculate optimal nap time (around natural energy dip or midpoint)
+            const napTime = new Date();
+            napTime.setHours(energyDip, 0, 0, 0);
+            
+            // Ensure nap is at least 4 hours before bedtime
+            const maxNapTime = new Date(bedDate.getTime() - (4 * 60 * 60 * 1000));
+            if (napTime > maxNapTime) {
+                napTime.setTime(maxNapTime.getTime());
+            }
+            
+            const resultHTML = `
+                <p><strong>Best Nap Time:</strong> ${napTime.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</p>
+                <p><strong>Recommended Duration:</strong> 20-30 minutes</p>
+                <p><strong>Why this time:</strong> Aligns with natural circadian rhythm dip and allows enough time before bedtime</p>
+                <div class="nap-benefits">
+                    <h4>Benefits of Afternoon Naps:</h4>
+                    <ul>
+                        <li>Improved alertness and performance</li>
+                        <li>Enhanced mood and reduced stress</li>
+                        <li>Better memory consolidation</li>
+                        <li>Increased creativity</li>
+                    </ul>
+                </div>
+            `;
+            
+            document.getElementById('napSchedule').innerHTML = resultHTML;
+            document.getElementById('result').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
