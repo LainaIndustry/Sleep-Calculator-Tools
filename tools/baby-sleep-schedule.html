@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Sleep Schedule - Create Healthy Sleep Routines | SleepWell</title>
+    <meta name="description" content="Create customized sleep schedules for your baby based on age and sleep patterns. Establish healthy sleep habits.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/baby-sleep.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxx" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2><a href="../index.html" style="color: inherit; text-decoration: none;">SleepWell</a></h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link active">Sleep Tools ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="sleep-calculator.html">Sleep Calculator</a></li>
+                            <li><a href="nap-calculator.html">Nap Calculator</a></li>
+                            <li><a href="baby-sleep-schedule.html" class="active">Baby Sleep Schedule</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../blog.html" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="calculator-main">
+        <div class="container">
+            <div class="calculator-header">
+                <h1>Baby Sleep Schedule</h1>
+                <p>Create healthy sleep routines for your baby based on age and development</p>
+            </div>
+
+            <div class="calculator-container">
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="baby-age">Baby's Age:</label>
+                        <select id="baby-age" class="form-control">
+                            <option value="newborn">Newborn (0-3 months)</option>
+                            <option value="infant">Infant (4-11 months)</option>
+                            <option value="toddler">Toddler (1-2 years)</option>
+                            <option value="preschooler">Preschooler (3-5 years)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="wake-time">Desired morning wake-up time:</label>
+                        <input type="time" id="wake-time" class="form-control" value="07:00">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sleep-cues">Sleep cues observed:</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="sleep-cues" value="rubbing-eyes"> Rubbing eyes
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="sleep-cues" value="yawning"> Yawning
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="sleep-cues" value="fussiness"> Fussiness
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="sleep-cues" value="looking-away"> Looking away
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="current-sleep">Current sleep pattern:</label>
+                        <select id="current-sleep" class="form-control">
+                            <option value="good">Good - Mostly predictable</option>
+                            <option value="variable">Variable - Some inconsistency</option>
+                            <option value="challenging">Challenging - Frequent waking</option>
+                            <option value="regression">Sleep regression phase</option>
+                        </select>
+                    </div>
+
+                    <button id="calculate-btn" class="btn btn-primary btn-large">Generate Sleep Schedule</button>
+                </div>
+
+                <div class="results-section" id="results-section" style="display: none;">
+                    <h3>Recommended Sleep Schedule</h3>
+                    <div class="schedule-info" id="schedule-info">
+                        <!-- Schedule summary will go here -->
+                    </div>
+                    <div class="schedule-timeline" id="schedule-timeline">
+                        <!-- Timeline will be populated here -->
+                    </div>
+                    
+                    <div class="baby-sleep-tips">
+                        <h4>Age-Specific Sleep Tips</h4>
+                        <div class="tips-container" id="age-tips">
+                            <!-- Age-specific tips will go here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AdSense Banner -->
+            <div class="ad-section">
+                <div class="ad-banner">
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-xxxxx"
+                         data-ad-slot="1234567893"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SleepWell</h3>
+                    <p>Helping you achieve better sleep through science-backed tools and resources.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="sleep-calculator.html">Sleep Calculator</a></li>
+                        <li><a href="nap-calculator.html">Nap Calculator</a></li>
+                        <li><a href="baby-sleep-schedule.html">Baby Sleep Schedule</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SleepWell. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/baby-sleep.js"></script>
+</body>
+</html>
