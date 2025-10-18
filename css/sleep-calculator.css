@@ -101,7 +101,6 @@
 
 .sleep-time-option:hover {
     border-color: #4a90e2;
-    transform: translateY(-2px);
 }
 
 .sleep-time-option.recommended {
