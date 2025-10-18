@@ -59,12 +59,6 @@ window.addEventListener('load', () => {
     }
 });
 
-// Form validation helper
-function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-}
-
 // Utility function for formatting time
 function formatTime(hours, minutes) {
     const period = hours >= 12 ? 'PM' : 'AM';
