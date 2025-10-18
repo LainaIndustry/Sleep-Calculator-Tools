@@ -58,32 +58,6 @@
     border-color: #4a90e2;
 }
 
-.checkbox-group {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-.checkbox-label {
-    display: flex;
-    align-items: center;
-    padding: 0.5rem;
-    border: 1px solid #e1e5e9;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.checkbox-label:hover {
-    border-color: #4a90e2;
-    background: #f0f7ff;
-}
-
-.checkbox-label input {
-    margin-right: 0.5rem;
-}
-
 .btn-large {
     width: 100%;
     padding: 15px;
@@ -214,17 +188,6 @@
     line-height: 1.5;
 }
 
-.wake-window {
-    display: inline-block;
-    background: #e7f5ff;
-    color: #1971c2;
-    padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-left: 0.5rem;
-}
-
 @media (max-width: 768px) {
     .calculator-container {
         padding: 2rem;
@@ -233,10 +196,6 @@
 
     .calculator-header h1 {
         font-size: 2rem;
-    }
-
-    .checkbox-group {
-        grid-template-columns: 1fr;
     }
 
     .info-grid {
@@ -251,25 +210,5 @@
     .timeline-time {
         min-width: auto;
         margin-bottom: 0.5rem;
-    }
-}
-
-/* Print styles for schedule */
-@media print {
-    .calculator-main {
-        padding: 0;
-    }
-    
-    .calculator-form,
-    .ad-section,
-    .footer,
-    .header {
-        display: none;
-    }
-    
-    .results-section {
-        display: block !important;
-        box-shadow: none;
-        border: 1px solid #333;
     }
 }
