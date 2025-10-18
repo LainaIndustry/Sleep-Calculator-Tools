@@ -51,7 +51,7 @@
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .tools-grid {
@@ -79,6 +79,18 @@
 
     .dropdown.active .dropdown-menu {
         display: block;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .faq-grid {
+        grid-template-columns: 1fr;
     }
 }
 
