@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Sitemap location
+Sitemap: https://yoursite.com/sitemap.xml
+
+# Disallow admin pages (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Allow search engines to crawl all pages
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
