@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Calculator - Find Your Perfect Bedtime for Better Sleep</title>
+    <meta name="description" content="Free sleep calculator tool. Calculate your perfect bedtime or wake-up time based on 90-minute sleep cycles. Wake up feeling refreshed and energized every morning.">
+    <meta name="keywords" content="sleep calculator, bedtime calculator, wake up time, sleep cycles, sleep quality, sleep calculator online, best time to sleep">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Sleep Calculator - Find Your Perfect Bedtime">
+    <meta property="og:description" content="Calculate your perfect bedtime or wake-up time based on sleep cycles. Wake up refreshed and energized.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/images/og-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yoursite.com/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/css/style.css" as="style">
+    <link rel="preload" href="/js/main.js" as="script">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Sleep Calculator",
+      "description": "Calculate your perfect bedtime or wake-up time based on 90-minute sleep cycles",
+      "url": "https://yoursite.com/",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Any",
+      "permissions": "browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <a href="/" class="logo">Sleep<span>Calculator</span></a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/nap-calculator.html">Nap Calculator</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Sleep Calculator</h1>
+            <p>Find out the perfect bedtime or wake up time to rise feeling refreshed and energized.</p>
+        </div>
+    </section>
+
+    <!-- Ad Placement - Leaderboard -->
+    <div class="container">
+        <div class="ad-container">
+            <div class="ad-label">Advertisement</div>
+            <!-- AdSense Code -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="1234567890"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section container">
+        <div class="tabs">
+            <button class="tab active" data-tab="wakeup">What time do you want to wake up?</button>
+            <button class="tab" data-tab="bedtime">If you go to bed now...</button>
+        </div>
+
+        <!-- Wake Up Time Tab -->
+        <div class="tab-content active" id="wakeup-tab">
+            <div class="input-group">
+                <label for="wakeup-time">Desired Wake-up Time:</label>
+                <input type="time" id="wakeup-time" class="time-input" value="07:00">
+            </div>
+            <button class="btn" id="calculate-bedtime">Calculate Bedtime</button>
+            <p class="note">The average human takes 15 minutes to fall asleep.</p>
+        </div>
+
+        <!-- Bed Time Tab -->
+        <div class="tab-content" id="bedtime-tab">
+            <div class="input-group">
+                <label>If you go to bed right now, you should wake up at:</label>
+                <div class="current-time" id="current-time"></div>
+            </div>
+            <button class="btn" id="calculate-wakeup">Calculate Wake-up Time</button>
+            <p class="note">The average human takes 15 minutes to fall asleep.</p>
+        </div>
+
+        <!-- Results Section -->
+        <div class="results" id="results">
+            <h3 id="results-title"></h3>
+            <div id="results-list"></div>
+            <a href="#" class="back-link" id="back-link">← Go back</a>
+        </div>
+    </section>
+
+    <!-- Ad Placement - Rectangle -->
+    <div class="container">
+        <div class="ad-container">
+            <div class="ad-label">Advertisement</div>
+            <!-- AdSense Code -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="0987654321"
+                 data-ad-format="rectangle"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <!-- Info Section -->
+    <section class="info-section container">
+        <h2>Understanding Sleep Cycles</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>What Are Sleep Cycles?</h3>
+                <p>Sleep cycles typically last about 90 minutes and consist of four stages: N1, N2, N3 (deep sleep), and REM sleep. Waking up at the end of a complete cycle helps you feel more rested.</p>
+            </div>
+            <div class="info-card">
+                <h3>Why 90 Minutes?</h3>
+                <p>The 90-minute cycle is based on the natural rhythm of our sleep architecture. Completing full cycles ensures you get adequate deep sleep and REM sleep, both crucial for physical and mental restoration.</p>
+            </div>
+            <div class="info-card">
+                <h3>Fall Asleep Time</h3>
+                <p>Most people take about 15 minutes to fall asleep. Our calculator accounts for this by subtracting 15 minutes from your desired bedtime to ensure you're in bed with enough time to actually fall asleep.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Sleep Calculator</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/nap-calculator.html">Nap Calculator</a></li>
+                        <li><a href="/blog/">Sleep Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="/terms.html">Terms of Service</a></li>
+                        <li><a href="/disclaimer.html">Disclaimer</a></li>
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Sleep Calculator. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/js/main.js"></script>
+    <script src="/js/sleep-calculator.js"></script>
+    <script src="/js/analytics.js"></script>
+    <script src="/js/ads.js"></script>
+</body>
+</html>
